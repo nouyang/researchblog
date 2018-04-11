@@ -4,9 +4,18 @@ categories: []
 date: 2018-04-08 01:54:00
 ---
 
-I recently started working with April tags, since they seem cool & you see them all over the place (used as fiducials for robots trying to walk around a somewhat unstructured environment).
+I recently started working with April tags, since they seem cool & you see them
+all over the place 
 
+1. used as fiducials for robots trying to walk around a somewhat unstructured environment).  
 ![Boston Dynamics, Atlas robot, picking up a box with an apriltag](/researchblog/images/boston_dynamics_atlas_apriltags.png)
+Source: "Atlas, The Next Generation", BostonDynamics, https://youtu.be/rVlhMGQgDkY?t=1m24s 
+
+
+2. Ant Tracking
+![Ant tracking with AprilTags](/researchblog/images/ants.png)
+Source: "AprilTag 2: Efficient and robust fiducial detection", https://april.eecs.umich.edu/media/pdfs/wang2016iros.pdf
+
 
 ## the internet fell short (feel free to skip this section)
 
