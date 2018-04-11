@@ -8,20 +8,20 @@ I recently started working with April tags, since they seem cool & you see them
 all over the place 
 
 1. used as fiducials for robots trying to walk around a somewhat unstructured environment).  
-![Boston Dynamics, Atlas robot, picking up a box with an apriltag](/researchblog/images/boston_dynamics_atlas_apriltags.png)
+![Boston Dynamics, Atlas robot, picking up a box with an apriltag](boston_dynamics_atlas_apriltags.png)
 Source: "Atlas, The Next Generation", BostonDynamics, https://youtu.be/rVlhMGQgDkY?t=1m24s 
-
+hgt
 
 2. Ant Tracking
-![Ant tracking with AprilTags](/researchblog/images/ants.png)
+![Ant tracking with AprilTags](ants.png)
 Source: "AprilTag 2: Efficient and robust fiducial detection", https://april.eecs.umich.edu/media/pdfs/wang2016iros.pdf
 
 
-## the internet fell short (feel free to skip this section)
+## the internet fell short (optional section)
 
 It was surprisingly hard to find instructions to get started, my search-fu was failing me. My search results turned up the original "official" website from the April Robotics Laboratory at University of Michigan, https://april.eecs.umich.edu/software/apriltag.html
 
-This had no "getting started" instructions on it. Same for the C++ wrapper by a researcher at CSAIL (now a professor who I met at CMU!) https://people.csail.mit.edu/kaess/apriltags
+This official site had no "getting started" instructions on it, and same for the C++ wrapper by a researcher at CSAIL (now a professor who I met at CMU!) https://people.csail.mit.edu/kaess/apriltags
 
 And same for the ROS wrapper around the Apriltags, which also confusingly seems to have several version that may or may not now be the same. http://wiki.ros.org/apriltags_ros and https://github.com/xenobot-dev/apriltags_ros
 
@@ -46,13 +46,13 @@ But now we need tags for it to recognize
 
 I actually found this pretty annoying, the zipped files on those sites give you a thousand options and it's not clear which ones will work. So for me, I actually had my friend give me four tags that definitely work.
 
-<img src="/researchblog/images/apriltags_00.png" alt="Apriltag ID 0" style="width: 100px;"/> ID 0
+<img src="apriltags_00.png" alt="Apriltag ID 0" style="width: 100px;"/> ID 0
 
-<img src="/researchblog/images/apriltags_01.png" alt="Apriltag ID 1" style="width: 100px;"/> ID 1
+<img src="apriltags_01.png" alt="Apriltag ID 1" style="width: 100px;"/> ID 1
 
-<img src="/researchblog/images/apriltag_06.png" alt="Apriltag ID 6" style="width: 100px;"/> ID 1
+<img src="apriltag_06.png" alt="Apriltag ID 6" style="width: 100px;"/> ID 1
 
-<img src="/researchblog/images/apriltag_07.png" alt="Apriltag ID 7" style="width: 100px;"/> ID 7
+<img src="apriltag_07.png" alt="Apriltag ID 7" style="width: 100px;"/> ID 7
 
 Next,
 
@@ -74,10 +74,10 @@ Id: 7 (Hamming: 0) distance=0.079741m, x=0.000532, y=0.006102, z=-1.487915, yaw=
 ```
 
 Two apriltags
-![apriltag.jpg](/researchblog/images/apriltag.jpg)
+![apriltag.jpg](apriltag.jpg)
 
 Apriltag_demo
-![apriltag_demo](/researchblog/images/apriltag_demo.jpg)
+![apriltag_demo](apriltag_demo.jpg)
 
 ## calibrate camera
 
@@ -104,9 +104,9 @@ At this point I printed out the checkboard pattern included in the repository, p
 
 Then I waved my board around in front of the camera and recorded a short video.
 
-![](/researchblog/images/0320.png ) 
+![](0320.png ) 
 
-![](/researchblog/images/0260.png ) 
+![](0260.png ) 
 
 
 Anyhow, I record ten or fifteen seconds of video. Then I ran

@@ -5,7 +5,7 @@ tags:
 ---
 
 Experimental Setup, in terms of computer
-![Experimental Setup, in terms of computer](/researchblog/images/02Apr2018/experimentalsetup03April2018.png)
+![Experimental Setup, in terms of computer](experimentalsetup03April2018.png)
 
 
 This covers the parts of the data collection system that I integrated and automated.
@@ -389,7 +389,7 @@ Make sure to click on the image below and maximize your window, if you want to b
 able to see the text and what is going on:
 
 Experimental Setup, in terms of computer
-![Experimental Setup, in terms of computer](/researchblog/images/02Apr2018/experimentalsetup03April2018.png)
+![Experimental Setup, in terms of computer](experimentalsetup03April2018.png)
 
 
 
@@ -429,14 +429,14 @@ while True :
 ```
 
 Physical Experiment Setup
-![Physical Experiment Setup](/researchblog/images/02Apr2018/02Apr_setup3.jpg)
+![Physical Experiment Setup](02Apr_setup3.jpg)
 
 
 # TODO: this is a temporary placeholder
 move these files to their own post, eventually...
 
-![width (y) of finger](/researchblog/images/02Apr2018/02Apr_setup2.jpg)
-02Apr2018/![length (x) of finger](/researchblog/images/02Apr_setup1.jpg)
-![x,y,z c02Apr2018/oordinates, also using a phone to directly write metadata into image](/researchblog/images/torque_calc.jpg)
-![verification of 02Apr2018/force transmitted, using a scale](/researchblog/images/scale_1g.jpg)
-![High tech attachment meth02Apr2018/od of IMU to finger](/researchblog/images/IMU_finger.jpg)
+![width (y) of finger](02Apr_setup2.jpg)
+![length (x) of finger](02Apr_setup1.jpg)
+![x,y,z coordinates, also using a phone to directly write metadata into image](torque_calc.jpg)
+![verification of force transmitted, using a scale](scale_1g.jpg)
+![High tech attachment method of IMU to finger](IMU_finger.jpg)

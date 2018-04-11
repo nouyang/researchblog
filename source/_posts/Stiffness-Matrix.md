@@ -3,7 +3,6 @@ author: N Ouyang
 date: 2018-04-08 05:55:56
 tags:
 ---
-$$ $$
 
 ## Motivation
 
@@ -183,7 +182,8 @@ I analyzed the y components (yaw components) only, with a single repeat per forc
 position, for all 3 or 4 positions I collected. See plot below.
 
 ### Graph
-![torque vs deflection](/researchblog/images/temp-plot.png)
+![torque vs deflection](torq_vs_pitch.png)
+
 
 ```bash
 Coefficients: 
