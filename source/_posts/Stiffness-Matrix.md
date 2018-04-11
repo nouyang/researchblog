@@ -3,6 +3,7 @@ author: N Ouyang
 date: 2018-04-08 05:55:56
 tags:
 ---
+In this post I'll write down some of the mathematical reasoning going into my plots.
 
 ## Motivation
 
