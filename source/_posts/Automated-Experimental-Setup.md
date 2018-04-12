@@ -10,12 +10,12 @@ Experimental Setup, in terms of computer
 
 This covers the parts of the data collection system that I integrated and automated.
 Specifically
-* Modified arduino code to spit out roll, pitch, yaw; continuously in CSV format over serial
+* Modified c code to spit out roll, pitch, yaw; continuously in CSV format over serial
 * Modified openCV code to 
   * continuously: spit out roll, pitch, yaw to terminal (stdout) 
   * on keypress: write out roll, pitch, yaw in CSV format into a file
   * on keypress: save image to file 
-* Created python code to read in arduino CSV data over serial
+* Created python code to read in c CSV data over serial
   * continuously: spit out roll, pitch, yaw to terminal (stdout) 
   * on keypress: write data to file
 
@@ -33,14 +33,14 @@ line, and -2 cm on the other side.
 
 ## Arduino
 
-On the arduino side, I didn't really modify much. Adafruit had a "unified sensor library" plugin for the BNO055 9axis IMU I used (which has an onboard ARM to do the proprietary sensor fusion stuff).
+On the c side, I didn't really modify much. Adafruit had a "unified sensor library" plugin for the BNO055 9axis IMU I used (which has an onboard ARM to do the proprietary sensor fusion stuff).
 
 At first I did tinker around, because I thought I wanted position (xyz cm) and
 not orientation (roll pitch yaw degrees). It's a bit more annoying to get the
 raw accel data out, the orientation data is what BNO055 has a magic calibration
 for. The accel data is what's called "raw sensor API" data. I think you call
 `bno.getVector` instead of `bno.getEvent`.
-```arduino
+```c
     imu::Vector<3> grav = bno.getVector(Adafruit_BNO055::VECTOR_GRAVITY); // !!!!
     //imu::Vector<3> linaccel = bno.getVector(Adafruit_BNO055::VECTOR_LINEARACCEL); // !!!!
     Serial.print(grav.x(), 4);
@@ -55,7 +55,7 @@ for. The accel data is what's called "raw sensor API" data. I think you call
 ### EEPROM Calibration data
 Oh, and to save on setup time, I run `restore_offsets.ino` first . The BNO055 has a bit of EEPROM.
 
-```arduino
+```c
 // as written by adafruit library
     EEPROM.put(eeAddress, bnoID);
 
@@ -68,7 +68,7 @@ This data is read into `sensorapi_bno055.ino`, after which, when I ran the file 
 
 DEBUG TIP: I had to change my whole experimental setup, because the acceleromter refused to calibrate when the finger didn't start out roughly parallel to the ground. Not sure why.
 
-```arduino
+```c
 // as written by adafruit library
     int eeAddress = 0;
     long bnoID;
@@ -97,7 +97,7 @@ DEBUG TIP: I had to change my whole experimental setup, because the acceleromter
 For reference, the data output format looks like this:
 
 **Data Format**
-```arduino
+```c
   displayCalStatus();
   Serial.print(";");
   Serial.print("XYZ; ");
@@ -122,7 +122,7 @@ of hot glue instead, which was REALLY ANNOYING. The triple beam balance plate
 is pretty slick. I ended up roughing up the surface a tiny bit with sandpaper).
 
 **Calibration Format**
-```arduino
+```c
 def displayCalStatus():
     bno.getCalibration(&system, &gyro, &accel, &mag);
     Serial.print("Sys:");
@@ -149,7 +149,7 @@ As per `IMU_to_file.py`, the libraries needed:
 
 ```python
 # 03 April 2018 
-# Reads in (arduino) serial port line by line, printing out on terminal. 
+# Reads in (c) serial port line by line, printing out on terminal. 
 # Also opens tkinter window. Pressing any key in there writes the next serial line to a file
 # In the terminal, Ctrl-C twice will exit the program. 
 import os
@@ -182,7 +182,7 @@ outf = open(fname,fmode)
             outf.flush()
 ```
 
-Also came across a neat way to avoid having to modify the file all the time, because when I power cycle the arduino, it'll occasionally change the port it's connected  [1].
+Also came across a neat way to avoid having to modify the file all the time, because when I power cycle the c, it'll occasionally change the port it's connected  [1].
 
 **Serial port changes**
 ```python
