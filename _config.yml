@@ -91,3 +91,7 @@ deploy:
   repo: https://github.com/nouyang/researchblog 
   branch: gh-pages
   message: 
+
+pandoc:
+    #extensions: +link_attributes-implicit_figures
+	mathEngine: mathjax

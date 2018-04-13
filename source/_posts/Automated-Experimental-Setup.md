@@ -5,7 +5,7 @@ tags:
 ---
 
 Experimental Setup, in terms of computer
-![Experimental Setup, in terms of computer](experimentalsetup03April2018.png)
+![Experimental Setup, in terms of computer](experimentalsetup03April2018.jpg)
 
 
 This covers the parts of the data collection system that I integrated and automated.
@@ -389,7 +389,7 @@ Make sure to click on the image below and maximize your window, if you want to b
 able to see the text and what is going on:
 
 Experimental Setup, in terms of computer
-![Experimental Setup, in terms of computer](experimentalsetup03April2018.png)
+![Experimental Setup, in terms of computer](experimentalsetup03April2018.jpg)
 
 
 
